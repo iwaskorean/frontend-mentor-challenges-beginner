@@ -2,33 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Ping coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  
+  <div class="container">
+      <div class="wrapper">
 
-  We are launching soon!
+      <img class='logo' src="images/logo.svg">
 
-  Subscribe and get notified
+      <h2 class="text1"><span class='nuetral'> We are launching</span> soon!</h2>
+      <h2 class="text2">Subscribe and get notified</h2>
+      
+      <div class="form">
+        <input type="text" class="email" value="" placeholder="&nbsp&nbsp Your e-mail address ... ">
+        <button>Notify Me</button>
+        <h2 class="error">Please provide a vaild e-mail address</h2>
+      </div>
 
-  Notify Me
+      <div class="hero">
+        <img class='hero' src="images/illustration-dashboard.png" />
+      </div>
 
-  &copy; Copyright Ping. All rights reserved.
+    
+    
+      
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+      <footer>
+        <p>&copy; Copyright Ping. All rights reserved.</p>
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="#">Sewook Han</a>.
+        </p>
+        </footer>
+    </div>
+  </div>
+
+
+
+  <script>
+    const input = document.querySelector('input');
+    const email = document.querySelector('.email');
+
+    const btn = document.querySelector('button');
+    const error = document.querySelector('.error');
+    const regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+
+    function mouseover(){
+      if(!regExp.test(input.value)){
+        error.classList.add('activeError');
+        email.style.borderColor = 'red'
+      }
+    }
+    
+    function mouseout(){
+      error.classList.remove('activeError');
+      email.style.borderColor = 'hsl(223, 100%, 88%)'
+
+    }
+
+    btn.addEventListener('mouseover',mouseover);
+    btn.addEventListener('mouseout',mouseout);
+  </script>
+
 </body>
 </html>

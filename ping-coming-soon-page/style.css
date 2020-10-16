@@ -1,0 +1,150 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  width: auto;
+}
+
+body{
+  font-family: 'Libre Franklin';
+  font-size: 20px;
+
+}
+
+.container{
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center; */
+}
+
+.wrapper{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-items: center; */
+
+}
+
+.logo{
+  width: 80px;
+  padding-bottom: 20px
+}
+
+.text1{
+ font-size: 30px;
+ font-weight: 800;
+
+}
+.text1 .nuetral{
+  font-weight: 400;
+  opacity: 0.3;
+}
+.text2{
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 30px;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  flex: 1;
+}
+
+.hero img{
+  max-width: 550px;
+  padding: 30px 0;
+}
+
+.email{
+  width: 280px;
+  height: 40px;
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 40px;
+  margin-right: 10px;  
+}
+
+input{
+  padding-left: 20px;
+}
+input::placeholder{
+  font-size: 15px;
+  color: hsl(223, 100%, 88%);
+}
+
+button{
+  height: 40px;
+  width: 180px;
+  color: white;
+  border-radius: 40px;
+  font-size: 15px;
+  border: 0;
+  background-color: hsl(223, 92%, 65%);
+  box-shadow: 1px 1px 5px hsl(223, 87%, 70%);
+}
+button:hover{
+  background-color: hsl(223, 85%, 82%);
+}
+
+.error{
+font-size: 9px;
+color: red;
+font-weight: 400;
+font-style: italic;
+margin-left: 5px;
+display: none;
+margin-top: 3px;
+}
+
+.activeError{
+  display: block;
+}
+
+footer p{
+  color: gray;
+  font-size: 10px;
+  text-align: center;
+  margin: 0px;
+}
+.attribution{
+  color: black;
+  opacity: 0.8;
+}
+
+
+@media(max-width:500px){
+  
+  body{
+    margin: 50px 0;
+  }
+
+  
+  .forms{
+    display: flex
+  }
+  .hero img{
+    max-width: 350px;  
+  }
+
+    
+  .email{  
+    width: 280px;
+  }
+
+  button{
+    display: block;
+    width: 300px;
+    margin-top: 10px;
+  }
+
+  
+
+}
