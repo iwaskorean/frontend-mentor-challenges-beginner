@@ -1,0 +1,130 @@
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+body{
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background: hsla(215, 100%, 94%, 0.301);
+    color: hsl(204, 43%, 93%);
+}
+/* wrapper & container */
+.wrapper{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 95vh;
+
+}
+
+.container{
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: repeat(2, 330px);
+    grid-template-rows: auto auto;
+    box-shadow: 3px 3px 5px rgba(192, 192, 192, 0.7);
+    border-radius: 10px;
+    /* note */
+    overflow:hidden;
+}
+.title{
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.about, .price, .detail{
+    padding: 20px 30px;
+}
+
+/* about__item1*/
+.about{
+    grid-column: 1 / -1;
+    background: white;
+}
+
+.about .title{
+    color: hsl(179, 62%, 43%);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.about .subTitle{
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+
+    font-size: 20px;
+}
+
+.about .text{
+    color: hsla(204, 4%, 25%, 0.726);
+}
+
+/* price__item2 */
+.price {
+    background-color: hsl(179, 62%, 43%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    justify-content: center;
+
+    
+}
+.price p{
+    margin:5px;
+}
+.price .subTitle{
+    margin-top: 18px;
+    color: rgba(255,255,255,0.7);
+}
+.dollar{
+    font-size: 35px;
+    color: white;
+}
+
+button{
+    width: 220px;
+    height: 40px;
+    font-size: 16px;
+    background: hsl(71, 73%, 54%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px hsl(179, 63%, 28%);
+    text-align: center;
+    margin-top: 18px;
+    align-self: center;
+}
+
+/* detail__item3 */
+
+.detail{
+    /* display: grid; */
+    background-color: hsla(179, 59%, 44%, 0.699);
+
+}
+
+.detail .subTitle{
+    color: rgba(255,255,255,0.7);
+    line-height: 23px;
+    font-size: 13px;
+    padding-right:60px
+}
+
+
+@media(max-width:500px){
+    .container{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .about, .price, .detail{
+        overflow: scroll;
+    }
+
+}
+
+footer{
+    color: black;
+}
