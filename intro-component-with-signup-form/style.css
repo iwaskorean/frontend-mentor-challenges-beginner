@@ -1,2 +1,236 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    font-family: 'Poppins', sans-serif;
+    /* box-sizing: inherit; */
+    font-size: 16px;
+}
+
+body{
+    background: no-repeat url('images/bg-intro-desktop.png');
+    background-color: hsl(0, 100%, 74%) ;
+    background-size: cover;
+    
+}
+
+
+/*  */
+.wrapper{
+    height: 94vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.wrapper > *{
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.title{
+    color: white;
+    font-weight: 700;
+    font-size:39px;
+    align-self: end;
+    margin: 0;
+}
+
+.subTitle{
+    color: white;
+    align-self: start;
+    font-size:15px;
+    margin: 0;
+}
+
+.item{
+    align-self: center;
+    grid-row: 1 / -1;
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.price{
+    width: 90%;
+    padding: 10px 0;
+    background-color: hsla(256, 63%, 54%, 0.884);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px hsla(246, 96%, 28%, 0.342);
+    
+    margin: 20px 0;
+}
+
+.price .text{
+    font-weight: 300;
+}
+
+.inputBox{
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 3px 3px 6px hsla(158, 73%, 3%, 0.274);
+    padding: 20px 0;
+}
+
+.inputBox input{
+    width: 80%;
+
+    padding: 10px 10px;
+    margin: 10px;
+}
+
+.input{
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    color: black;
+}
+.error{
+    border: 1.5px solid red;
+    background-image: url('images/icon-error.svg');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+}
+
+h1{
+    width: 80%;
+    color: red;
+    padding: 0;
+    font-size: 5px;
+    text-align:right;
+    margin: -7.5px 0;
+    font-weight: 400;
+}
+
+
+.inputBox input::placeholder{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.4);
+}
+
+
+.inputBox button {
+    width: 80%;
+    font-size: 14px;
+    color: white;
+    background: hsl(154, 59%, 51%);
+    border: 0;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px hsla(157, 76%, 3%, 0.425);
+    padding: 10px 10px;
+    margin: 10px;
+}
+button:hover{
+    opacity: 0.8;
+}
+
+.inputBox .notice{
+    font-size:10px;
+    color: hsla(158, 73%, 3%, 0.438);
+    margin: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.inputBox .notice .text{
+    font-size:10px;
+    font-weight: 600;
+    color: red;
+}
+
+.attribution{
+    font-size: 3px;
+    text-align: right;
+    color: gray;
+}
+.attribution a{
+    color: gray;
+    font-size: 3px;
+    text-decoration: none;
+}
+
+.firstName, .lastName, .emial, .password{
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+
+
+@media(max-width:500px){
+    body{
+        text-align: center;
+        overflow: scroll;
+    }
+
+    .wrapper{
+        height: 95vh;
+    }
+    .container{
+        height: 100%;
+        grid-template-columns: 90%;
+        grid-template-rows: auto auto auto;
+        grid-gap: 0;
+        /* margin-top: 80px; */
+    }
+
+    .item{
+        grid-row: span 1;
+        grid-column-start: 1;
+    }
+
+    .title{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .subTitle{
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .price{
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .attribution{
+        display: none;
+    }
+
+    @media (max-height:790px){
+
+        .title{
+            font-size: 15px;
+        }
+        .subTitle{
+            display: none;
+        }
+        .price, .price .text{
+            font-size: 10px;
+            /* margin: 20px; */
+        }
+
+        .inputBox button{
+            font-size: 10px;
+        }
+
+    }
+}
+

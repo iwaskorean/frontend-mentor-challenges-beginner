@@ -3,35 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Intro component with sign up form</title>
 
 </head>
 <body>
+  <div class="wrapper">
 
-  Learn to code by watching others
+    <div class="container">
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+      <div class="title">
+        Learn to code by watching others
+      </div>
+      <p class="subTitle">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. 
+      </p>
 
-  Try it free 7 days then $20/mo. thereafter
+        <div class="item">
+          <div class="price"> Try it free 7 days <span class='text'> then $20/mo. thereafter</span></div>
+          <div class="inputBox">
+            <input type="text" class="input" id="First Name" placeholder="First Name" value=""/>
+            <input type="text" class="input" id="Last Name" placeholder="Last Name" value=""/>
+            <input type="text" class="input" id="Email Address" placeholder="Email Address" value=""/>
+            <input type="password" class="input" id="Password" placeholder="Password" value=""/>
+            
+            <button>Claim your free trial </button>  
+            
+            <div class="notice">By clicking the button, you are agreeing to our <span class="text"> Terms and Services</span></div>
+        </div>
+      </div>
+    
+    </div>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+</div>
 
-  Claim your free trial 
+<footer>
+  <p class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sewook Han</a>.
+  </p>
+</footer>
 
-  By clicking the button, you are agreeing to our Terms and Services
+
+<script>
+  const inputs = document.querySelectorAll('input');
+  const button = document.querySelector('button');
+  let h1 = document.createElement('h1');
+  const regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+
+  function active(){
+    inputs.forEach(input => {
+      
+      if(input.id == "Email Address"){
+          if(input.value && !regExp.test(input.value)){
+            console.log("working");
+            input.value = 'email@example.com';
+            input.style.color = 'red';
+            h1 = document.createElement('h1');
+            input.classList.add('error');
+            // input.placeholder = "";
+            h1.innerText = `Look like this is not an email`;
+            input.after(h1);
+          }
+        }
+
+      if(!input.value){
+
+        h1 = document.createElement('h1');
+        input.classList.add('error');
+        input.placeholder = "";
+        h1.innerText = `${input.id} cannot be empty`;
+        input.after(h1);
+      }
+    });
+  }
+
+  function activeOff(){
+    inputs.forEach(input => {
+      input.classList.remove('error');
+      h1 = input.nextSibling;
+      h1.style.display = 'none';
+      h1.style.margin = '0 0';
+      input.value = '';
+      input.placeholder = `${input.id}`;
+      input.style.color = 'black'
+    });
+  };
   
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  button.addEventListener('mouseover',active);
+  button.addEventListener('mouseout',activeOff);
+
+</script>
+
 </body>
 </html>
