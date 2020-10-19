@@ -1,0 +1,158 @@
+*, *:before, *:after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    background:  url('images/bg-pattern-desktop.svg');
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5fr 6fr 5fr;
+    grid-template-rows: 1.5fr 5.5fr 6fr;
+    grid-template-areas: 
+        "space logo hero"
+        "space header hero"
+        "space subTitle hero";
+}
+.logo {
+    grid-area: logo;
+    align-self: end;
+}
+.logo img{
+    width: 120px;
+}
+
+.header{
+    grid-area: header;
+    font-size: 55px;
+    line-height: 55px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    align-self: end;
+}
+#header__were{
+    color: hsla(0, 60%, 57%, 0.692);
+    font-weight: 200;
+}
+.header p {
+    font-weight: 400;
+}
+
+.inputBox{
+    display: flex;
+    margin-top: 20px;
+}
+.subTitle{
+    grid-area: subTitle;
+    color: hsla(0, 60%, 57%, 0.692);
+    font-weight: 400;
+    padding-right: 200px;
+    padding-top: 20px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.subTitle input{
+    width: 80%;
+    border: 0.5px solid rgba(0, 0,0,0.2);
+    border-radius: 20px;
+    padding: 0 20px;
+}
+.subTitle input::placeholder{
+    color: hsla(0, 64%, 68%, 0.596);
+}
+input:focus, button:focus{
+    outline: none;
+}
+.subTitle button{
+    padding: 10px 30px;
+    margin-left: -40px;
+    text-align: center;
+    display: inline;
+    border: 0;
+    border-radius: 20px;
+    background: 
+    linear-gradient(135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    box-shadow: 1px 3px 3px hsla(0, 24%, 61%, 0.623);
+}
+button:hover{
+    background:  hsl(0, 82%, 89%);
+}
+
+button img{
+    width: 10px;
+    height: 15px;
+}
+
+.hero{
+    grid-column-start: 2;
+    grid-area: hero;
+    background-image: url("images/hero-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+h2{
+    color: hsl(0, 74%, 74%);
+    font-size: 13px;    
+    padding-left: 1vw;
+    font-weight: 400;
+}
+.error{
+    background: no-repeat url("images/icon-error.svg");
+    background-position-y: 50%;
+    background-position-x: 80%;
+}
+
+
+
+@media(max-width:500px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 2fr 3fr;
+        grid-template-areas: 
+        "logo" "hero" "header" "subTitle" ;
+    }
+    .logo{
+        align-self: center;
+        margin-left: 20px;
+    }
+    .header{
+        text-align: center;
+        align-self: center;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-top: 60px;
+    }
+    .subTitle{
+        align-self: start;
+        text-align: center;
+        justify-self: center;
+        padding: 0 20px;
+        line-height: 20px;
+        margin-top: 30px;
+
+    }
+    .inputBox{
+        margin-top: 50px;
+    }
+    .hero{
+        background-image: url("images/hero-mobile.jpg");
+        background-size: cover;
+        background-position: top;
+    }
+    h2{
+        text-align: left;
+        padding-left: 3vw;
+    }
+}
