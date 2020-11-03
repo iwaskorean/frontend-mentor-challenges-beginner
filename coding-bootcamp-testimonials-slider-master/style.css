@@ -1,0 +1,138 @@
+
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: Inter;
+    /* font-size: 2em; */
+    font-size: 2vw;
+    background: 
+    url("images/pattern-quotes.svg") no-repeat 15% 30%, 
+    url("images/pattern-curve.svg") no-repeat 0% 100%,
+    url("images/pattern-bg.svg") no-repeat 90% 40%;
+    background-size: 9% auto, 40% auto, 50%;
+}
+.wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+}
+
+.textBox{
+}
+.textBox .text{
+    position: relative;
+    display: inline-block;
+    width: 115%;
+    font-weight: 300;
+    line-height: 150%;
+}
+.textBox .name{
+    margin-top: 5%;
+    /* font-size: 0.8em; */
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.textBox .name .job{
+    color: rgb(206, 206, 206);
+}
+
+.imageBox{
+    text-align: none;
+}
+.imageBox .person{
+    position: relative;
+    z-index: -2;
+    width: 35vw;
+    box-shadow: hsla(240, 37%, 20%, 0.39) 4px 4px 15px;
+}
+.imageBox button{
+    width: 7vw;
+    height: 5.5vh;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: hsl(0, 0%, 96%);
+    box-shadow: hsla(240, 37%, 20%, 0.5) 3px 3px 10px;
+    position: relative;
+    top: -25px;
+    left: 25px;
+    z-index: 10;
+}
+.imageBox button img{
+    height: 2vh;
+    padding: 0 15%;
+    color: hsl(240, 38%, 20%);
+}
+.first{
+    display: block;
+}
+.second{
+    display: none;
+}
+
+
+@media(max-width:500px){
+    body{
+        background: 
+        url("images/pattern-quotes.svg") no-repeat 50% 60%, 
+        url("images/pattern-curve.svg") no-repeat 0% 100%,
+        url("images/pattern-bg.svg") no-repeat 50% 15%;
+        background-size: 15% , 80% , 100%;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .imageBox{
+        order: 1;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+    }
+    .imageBox .person{
+        width: 80vw;
+    }
+    .imageBox button{
+        width: 30%;
+        height: 5vh;
+        position: relative;
+        top: -20px;
+        left: 0;
+        z-index: 10;
+    }
+    .textBox{
+        order: 2;
+        text-align: center;
+        font-size: 5vw;
+        margin-top: 30px;
+    }
+    .textBox .text{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        font-weight: 300;
+        line-height: 150%;
+    }
+    .textBox .name{
+        font-size: 3vw;
+    }
+    .textBox .job{
+        margin-top: 3px;
+        display: block;
+    }
+
+}

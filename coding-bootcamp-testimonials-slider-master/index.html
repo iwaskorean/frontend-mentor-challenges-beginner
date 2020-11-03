@@ -2,37 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+  <title> Coding Bootcamp Testimonials Slider</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  “ I’ve been interested in coding for a while but never taken the jump, until now. 
-  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-  excited about the future. ”
-
-  Tanya Sinclair
-  UX Engineer
-
-  “ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”
-
-  John Tarkpor
-  Junior Front-end Developer
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="wrapper">
+  <div class="container">
+  
+    <div class="textBox first" data-indexNumber="true">
+      <p class="text">
+        “ I’ve been interested in coding for a while but never taken the jump, until now. 
+    I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+    excited about the future. ”
+      </p>
+
+      <p class="name">Tanya Sinclair <span class="job">UX Engineer</span></p>
+    </div>
+    <div class="textBox second" data-indexNumber="false">
+      <p class="text">
+        “ If you want to lay the best foundation possible I’d recommend taking this course. 
+        The depth the instructors go into is incredible. I now feel so confident about 
+        starting up as a professional developer. ”
+      </p>
+
+      <p class="name">John Tarkpor <span class="job">Junior Front-end Developer</span></p>
+    </div>
+
+    <div class="imageBox">
+      <img class="person first" src="images/image-tanya.jpg" alt="" data-indexNumber="true">
+      <img class="person second" src="images/image-john.jpg" alt="" data-indexNumber="false">
+      <button>
+        <img class="prev" src="images/icon-prev.svg" alt="">
+        <img class="next" src="images/icon-next.svg" alt="">
+      </button>
+    </div>
+
+
+
   </div>
+
+</div>
+  
+   <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sewook Han</a>.
+  </div> -->
+
+
+  
+  <script>
+    
+    const button = document.querySelector('button');
+    const first = document.querySelectorAll('.first');
+    const second = document.querySelectorAll('.second');
+
+    function toggle(){
+      if(first[0].dataset.indexnumber == 'true'){
+       first.forEach(element => element.style.display = 'none' );
+       second.forEach(element => element.style.display = 'block' );
+       
+       first.forEach(element => element.dataset.indexnumber = 'false');
+       second.forEach(element => element.dataset.indexnumber = 'true');
+      }
+      else{
+        first.forEach(element => element.style.display = 'block' );
+        second.forEach(element => element.style.display = 'none' );
+        
+        first.forEach(element => element.dataset.indexnumber = 'true');
+        second.forEach(element => element.dataset.indexnumber = 'false');
+      }
+
+    }
+
+    button.addEventListener('click', toggle);
+
+  </script>
 </body>
 </html>
