@@ -1,0 +1,129 @@
+   *,*:before, *:after{
+        
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: Manrope;
+        font-size: 13px;
+        background-color:hsl(210, 46%, 95%);
+        font-weight: 500;
+    }
+
+    .wrapper{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container{
+        width: 50%;
+        height: 40%;
+        min-height: 35%;
+        display: flex;
+        border-radius: 7px;
+        overflow: hidden;
+        box-shadow: 3px 3px 10px hsl(0, 0%, 78%);
+    }
+
+    .hero{
+        width: 100%;
+        height: 100%;
+        background: no-repeat url("images/drawers.jpg");
+        background-size: cover;
+    }
+
+    .textBox{
+        background: white;
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .textBox .title{
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .textBox .subTitle{
+        font-size: 1em;
+        margin: 20px 0;
+        color: rgb(126, 120, 120);
+        padding: 10px 0;
+
+    }
+
+    .textBox .profile{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 10% 75% 10%; 
+        align-items: center;
+    }
+    .textBox .profile .avatar{
+        min-width:100%;
+        height: 100%;
+        border-radius: 100%;
+    }
+    .date{
+        display: block;
+        color: rgb(180, 175, 175);
+    }
+    .textBox .profile .share{
+        width: 70%;
+        height: 70%;
+        align-self: center;
+        justify-self: center;
+        border-radius: 100%;
+        background: no-repeat url("images/icon-share.svg") hsl(210, 46%, 95%);
+        background-position: center;
+    }
+
+
+    @media(max-width:800px){
+        
+        *{        
+            overflow: scroll;
+        }
+        .container{
+            width: 80%;
+            height: 80%;
+            flex-direction: column;
+        }
+        .hero{
+            flex-basis: 35%;
+        }
+        .textBox{
+            flex-basis: 65%;
+        }
+        .textBox .profile{
+            grid-template-columns: auto 1fr 0.3fr; 
+        }
+        .textBox .profile .share{
+            max-width: 40%;
+            height: 100%;
+        }
+    }
+
+    @media(max-width: 500px){
+        .textBox .profile .share{
+            height: 100%;
+            max-width: 80%;   
+        }
+    }
+
+    @media(max-height: 600px){
+        .container{
+            overflow: visible;
+        }
+    }
+
+
+
+    
+
+
+    
+    
