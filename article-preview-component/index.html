@@ -9,14 +9,18 @@
   <title>Article preview component</title>
 </head>
 <body>
+  <div class="shareBox">
+    <p>S H A R E</p>
+    <div class="icons">
+      <img src="images/icon-facebook.svg">
+      <img src="images/icon-pinterest.svg">
+      <img src="images/icon-twitter.svg">
+    </div>
+  </div> 
   <div class="wrapper">
-    
     <div class="container">
-      
       <div class="hero">
       </div>
-      
-      
       <div class="textBox">
         <p class="title">
           Shift the overall look and feel by adding these wonderful 
@@ -32,14 +36,40 @@
           <p class="name">Michelle Appleton <span class="date">28 Jun 2020</span></p>
           <div class="share"></div>
         </div>
+        <div class="profile mobile">
+          <p>S H A R E</p>
+          <div class="icons">
+            <img src="images/icon-facebook.svg">
+            <img src="images/icon-pinterest.svg">
+            <img src="images/icon-twitter.svg">
+          </div>
+        
+        <div class="share"></div>
+      </div>
       </div>
     </div>  
   </div>
-
    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Sewook Han</a>.
   </div> -->
 
+  <script>
+    const share = document.querySelectorAll('.share');
+    const box = document.querySelector('.shareBox');
+    const boxMobile = document.querySelector('.mobile');
+    const profile = document.querySelector('.textBox .profile');
+    function active(){
+      let width = window.innerWidth;
+      if(width <= 950){
+        profile.classList.toggle('hide');
+        boxMobile.classList.toggle('active__mobile');
+      }
+      else{
+        box.classList.toggle('active');
+      }
+    }
+    share.forEach(btn => btn.addEventListener('click',active));
+  </script>
 </body>
 </html>
