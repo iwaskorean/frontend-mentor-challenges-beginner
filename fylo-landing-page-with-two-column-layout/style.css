@@ -1,0 +1,373 @@
+:root{
+    --VerDarkBlue: hsl(243, 87%, 12%);
+    --DesaturatedBlue: hsl(238, 22%, 44%);
+    --BrightBlue: hsl(224, 93%, 58%);
+    --ModerateCyan: hsl(170, 45%, 43%);
+    --LightGrayishBlue: hsl(240, 75%, 98%);
+    --LightGray: hsl(0, 0%, 75%);
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    margin: 2rem;
+}
+.header img{
+    width: 12vw;
+    min-width: 125px;
+}
+.header .nav{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.section{
+    width: 100%;
+    height: 83vh;
+    padding: 2rem;
+}
+
+.hero{
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    order:  2;
+    padding: 1rem;
+}
+.hero img{
+    width: 100%;
+}
+
+.content > *{
+    margin: 1.5rem;
+}
+
+.heading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+.features, .team{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+
+button{
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+}
+
+.features .inputBox {
+    display: flex;
+    height: 2rem;
+    min-height: 30px;
+}
+.features .inputBox input{
+    flex-basis: 50%;
+    margin-right: 1rem;
+    outline: none;
+    padding: 1rem;
+}
+
+.features .inputBox button{
+    color: white;
+    flex-basis: 40%;
+    border: none;
+    background-color: var(--BrightBlue);
+    box-shadow: 2px 2px 5px rgba(1, 1, 1, 0.199);
+    padding: 0 1rem;
+    outline: none;
+}
+
+.space{
+    width: 100%;
+    height: 14vh;
+    background: no-repeat url(images/bg-curve-desktop.svg) 50% 0%;
+    background-size: cover;
+}
+
+.team{
+    background-color: var(--LightGrayishBlue);
+}
+#text{
+    margin-top: -1rem;
+}
+.help{
+    min-width: 160px;
+    width: 28%;
+    color: var(--ModerateCyan);
+    border-bottom: 0.1rem solid var(--ModerateCyan);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: -1rem;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1.5rem;
+    width: 40%;
+    min-width: 250px;
+    box-shadow: 2px 2px 5px rgba(1, 1, 1, 0.199);
+    font-size: 0.8rem;
+}
+.card > * {
+    margin: 0.3rem 0;
+}
+.card .quotes{
+    width: 5%;
+}
+.card .profile{
+    display: grid;
+    grid-template-columns: 13% auto;
+    align-items: center;
+    grid-gap: 0.3rem;
+}
+.profile img{
+    width: 100%;
+    border-radius: 100%;
+}
+.profile .name{
+    font-weight: 700;
+}
+
+
+.sign{
+    height: 33vh;
+    background: var(--DesaturatedBlue);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+.sign .content{
+    padding-right: 10rem;
+}
+.sign .content .heading{
+    font-size: 1.5rem;
+}
+.sign .content .text{
+    font-size: 0.8rem;
+}
+.sign .inputBox {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.5rem;
+}
+.sign .inputBox input{
+    width: 80%;
+    height: 2rem;
+    min-height: 30px;
+    outline: none;
+    padding: 1rem 1rem;
+}
+
+.sign .inputBox button{
+    color: white;
+    border: none;
+    background-color: var(--BrightBlue);
+    box-shadow: 2px 2px 5px rgba(1, 1, 1, 0.199);
+    width: 30%;
+    height: 2rem;
+    min-height: 30px;
+    outline: none;
+}
+
+.footer{
+    width: 100%;
+    height: 50vh;
+    background: var(--VerDarkBlue);
+    color: white;
+    display: grid;
+}
+.footer .content{
+    padding: 2rem;
+    display: grid;
+    width: auto;
+    grid-template: repeat(2, auto) / repeat(4, 1fr);
+    align-items: flex-start;
+    align-self: center;
+}
+.footer p{
+    margin: 0.5rem 0;
+}
+
+.svg{
+    fill: #fff;
+    grid-column: 1 / -1;
+    justify-self: left;
+}
+
+.icon{
+    width: 1rem;
+    margin-right: 1rem;
+}
+.icon-re{
+    width: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+
+@media(max-width:650px){
+    html{
+        font-size: 10px;
+        overflow: scroll;
+    }
+    .header img{
+        width: 2vw;
+        min-width: 100px;
+    }
+    .header .nav{
+        width: 40%;
+    }
+    .section{
+        height: 85vh;
+    }
+    .features, .team{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .features .hero, .team .hero{
+        order:  0;
+        width: 100%;
+    }
+
+    .features .inputBox{
+        flex-basis: 100%;
+        flex-direction: column;
+    }    
+    .features .inputBox input{
+        width: 100%;
+        padding: 1rem;
+        height: 3rem;
+        min-height: 30px;
+    }
+    .features .inputBox button{
+        margin-top: 0.5rem;
+        padding: 0 1rem;
+        height: 3rem;
+        min-height: 30px;
+    }
+    .help{
+        min-width: 115px;
+    }
+    
+    .team{
+        height: 105vh;
+    }
+    .team .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .space{
+        height: 4vh;
+        background: no-repeat url(images/bg-curve-mobile.svg) 50% 10%;
+    }
+    .card{
+        text-align: left;
+    }
+    .sign{
+        height: 33vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .sign .content{
+        padding-right: 0;
+        height: auto;
+    }
+    .sign .inputBox {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0.5rem;
+    }
+    .sign .inputBox input, .sign .inputBox button{
+        width: 100%;
+    }
+    .footer{
+        height: 65vh;
+    }
+    .footer .content{
+        padding: 2rem;
+        grid-template: auto / 1fr;
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media(max-height:600px){
+    .section{
+        height: 100vh;
+    }
+    .team{
+        height: 125vh;
+    }
+    .sign{
+        height: 50vh;
+    }
+    .footer{
+        height: 80vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
