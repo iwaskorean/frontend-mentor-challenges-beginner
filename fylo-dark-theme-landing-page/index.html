@@ -2,105 +2,189 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Fylo landing page with dark theme and features grid</title>
 </head>
 <body>
-  Features
-  Team
-  Sign In
 
-  All your files in one secure location, accessible anywhere.
+  <div class="wrapper">
+    <div class="header">
+      <img src="images/logo.svg" alt="" class="logo">
+      <div class="nav">
+        <a class="navBtn" href="#">Features</a>
+        <a class="navBtn" href="#">Team</a>
+        <a class="navBtn" href="#">Sign In</a>
+      </div>
+    </div>
 
-  Fylo stores all your most important files in one secure location. Access them wherever 
-  you need, share and collaborate with friends family, and co-workers.
+    <div class="section intro">
+        <img class="hero" src="images/illustration-intro.png" alt="">
+        <div class="content">
+          <div class="heading">All your files in one secure location, accessible anywhere.</div>
+          <div class="text">Fylo stores all your most important files in one secure location. Access them wherever 
+            you need, share and collaborate with friends family, and co-workers.</div>
+        <button>Get Started</button>
+        </div>
+    </div>
 
-  Get Started
+    <div class="section functions">
+      <div class="container">
+        <div class="box">
+          <img src="images/icon-access-anywhere.svg" alt="">
+          <div class="heading">Access your files, anywhere</div>
+          <div class="text">
+            The ability to use a smartphone, tablet, or computer to access your account means your 
+            files follow you everywhere.
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/icon-security.svg" alt="">
+          <div class="heading">    Security you can trust</div>
+          <div class="text">
+            2-factor authentication and user-controlled encryption are just a couple of the security 
+            features we allow to help secure your files.
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/icon-collaboration.svg" alt="">
+          <div class="heading">    Real-time collaboration</div>
+          <div class="text">
+            Securely share files and folders with friends, family and colleagues for live collaboration. 
+            No email attachments required.
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/icon-any-file.svg" alt="">
+          <div class="heading">    Store any type of file</div>
+          <div class="text">
+            Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
+            file types to be securely stored and shared.
+          </div>
+        </div>
+      </div>
+    </div>
 
-  Access your files, anywhere
+    <div class="section work">
+      <img class="hero" src="images/illustration-stay-productive.png" alt="">
+      <div class="content">
+        <div class="heading">  Stay productive, wherever you are</div>
+        <div class="text">
+          Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
+          storage needs.
+        </div>
+        <div class="text">
+          Securely share files and folders with friends, family and colleagues for live collaboration. No email 
+          attachments required.
+        </div>
+        <a href="#" class="link">  See how Fylo works <img src="images/icon-arrow.svg" alt=""></a>
+      </div>
+    </div>
 
-  The ability to use a smartphone, tablet, or computer to access your account means your 
-  files follow you everywhere.
+    <div class="section social">
+      <div class="card">
+        <div class="text">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.
+        </div>
+        <div class="profile">
+          <img class="avatar"src="images/profile-1.jpg" alt="">
+          <div class="name">Satish Patel</div>
+          <div class="job">Founder & CEO, Huddle</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="text">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.
+        </div>
+        <div class="profile">
+          <img class="avatar" src="images/profile-2.jpg" alt="">
+          <div class="name">Bruce McKenzie</div>
+          <div class="job">Founder & CEO, Huddle</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="text">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.
+        </div>
+        <div class="profile">
+          <img class="avatar" src="images/profile-3.jpg" alt="">
+          <div class="name">  Iva Boyd</div>
+          <div class="job">Founder & CEO, Huddle</div>
+        </div>
+      </div>
+      <div class="access">
+        <div class="heading">Get early access today</div>
+        <div class="text">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
+          questions, our support team would be happy to help you.</div>
+        <div class="inputBox">
+          <input type="text" placeholder="">
+          <button>Get Started For Free</button>
+        </div>
+        <div class="alert">please enter the valid address</div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <img class="logo" src="images/logo.svg" alt="">
+      <div class="location">
+        <img class="icon" src="images/icon-location.svg" alt="">
+        <span class="text">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+          dolore magna aliqua</span>
+      </div>
+      <div class="phone">
+        <img class="icon" src="images/icon-location.svg" alt="">
+        <span class="text">+1-543-123-4567</span><br>
+        <img class="icon" src="images/icon-email.svg" alt="">
+        <span class="text"> example@fylo.com</span>
+      </div>
+      <div class="about">
+        <div class="text">About Us</div>
+        <div class="text">Jobs</div>
+        <div class="text">Press</div>
+        <div class="text">Blog</div>
+      </div>
+      <div class="contact">
+        <div class="text">Contact Us</div>
+        <div class="text"> Terms</div>
+        <div class="text">Privacy</div>
+      </div>
+      <div class="icons">
+        <img src="images/favicon-32x32.png" alt="">
+        <img src="images/favicon-32x32.png" alt="">
+        <img src="images/favicon-32x32.png" alt="">
+      </div>
+    </div>
+  
+  </div>
 
-  Security you can trust
-
-  2-factor authentication and user-controlled encryption are just a couple of the security 
-  features we allow to help secure your files.
-
-  Real-time collaboration
-
-  Securely share files and folders with friends, family and colleagues for live collaboration. 
-  No email attachments required.
-
-  Store any type of file
-
-  Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
-  file types to be securely stored and shared.
-
-  Stay productive, wherever you are
-
-  Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
-  storage needs.
-
-  Securely share files and folders with friends, family and colleagues for live collaboration. No email 
-  attachments required.
-
-  See how Fylo works
-
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
-
-  Satish Patel
-  Founder & CEO, Huddle
-
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
-
-  Bruce McKenzie
-  Founder & CEO, Huddle
-
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
-
-  Iva Boyd
-  Founder & CEO, Huddle
-
-  Get early access today
-
-  It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
-  questions, our support team would be happy to help you.
-
-  Get Started For Free
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-  dolore magna aliqua
-
-  +1-543-123-4567
-  example@fylo.com
-
-  About Us
-  Jobs
-  Press
-  Blog
-
-  Contact Us
-  Terms
-  Privacy
-
-  <footer>
+  <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </p>
-  </footer>
+  </footer> -->
+
+  <script>
+    const btn = document.querySelector('.access button');
+    const input = document.querySelector('input');
+    const regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    const error = document.querySelector('.alert');
+    
+    function active(){
+      if(!input.value || !regExp.test(input.value)){
+        error.classList.toggle('active');
+      }
+    }
+    btn.addEventListener('mouseover', active);
+    btn.addEventListener('mouseout', active);
+  </script>
 </body>
 </html>

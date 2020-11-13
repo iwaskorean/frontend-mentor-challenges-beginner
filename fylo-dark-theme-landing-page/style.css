@@ -1,0 +1,379 @@
+:root{
+    --DarkBlue1: hsl(217, 28%, 15%); /* (intro and email sign up background) */
+    --DarkBlue2: hsl(218, 28%, 13%); /* (main background) */
+    --DarkBlue3: hsl(216, 53%, 9%); /* (footer background) */
+    --DarkBlue4: hsl(219, 30%, 18%); /* (testimonials background) */
+    --Cyan: hsl(176, 68%, 64%); /* (inside call-to-action gradient) */
+    --Blue: hsl(198, 60%, 50%); /* (inside call-to-action gradient) */
+    --LightRed: hsl(0, 100%, 63%); /* (error) */
+    --White: hsl(0, 0%, 100%);
+}
+
+*, 
+*:before, 
+*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background: var(--DarkBlue3);
+    /* font-family: 'Raleway', sans-serif; */
+        /* ### Headings, Call-to-actions, Header Navigation */
+}
+
+.header, button, heading{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    background: var(--DarkBlue3);
+    padding: 1.5rem 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo{
+    width: 9vw;
+    min-width: 4.5rem;
+    height: auto;
+}
+.header .nav{
+    display: flex;
+    flex-direction: row;
+}
+.navBtn:hover{
+    border-bottom: 1px white solid;
+    font-weight: 700;
+}
+.header .nav a{
+    margin: 0 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.section{
+    width: 100%;
+    height: 90vh;
+}
+
+
+.heading{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.intro{
+    background: var(--DarkBlue1);
+    height: 120vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: no-repeat url(images/bg-curvy-desktop.svg) 50% 100%;
+    background-size: contain;
+}
+.intro .hero{
+    width: 40%;
+    max-width: 700px;
+    margin: 1rem 0;
+}
+.intro .content{
+    width: 60%;
+}
+.intro .content > *{
+    margin: 1rem 0;
+}
+
+button{
+    color: var(--White);
+    width: 35%;
+    padding: 0.8rem;
+    background-color: var(--Blue);
+    border:none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+button:hover{
+    background-color: var(--Cyan);
+}
+
+.functions, .work, .social{
+    background-color: var(--DarkBlue2);
+}
+.functions{
+    display: flex;
+    justify-content: center;
+}
+.functions .container {
+    display: grid;
+    align-self: center;
+    grid-column-gap: 5rem;
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    text-align:center;
+}
+.functions .container .box{
+    display: grid;
+    justify-items: center;
+    align-content: flex-start;
+}
+.functions .container .box img{
+    height : 5vw;
+}
+.functions .container .box >*{
+    margin: 1rem 0 ;
+}
+.functions .container .box .heading{
+    font-size: 1.5rem;
+}
+
+.work{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+.work .hero{
+    width: 50%;
+}
+.work > *{
+    margin: 0 2rem
+}
+.work .content > *{
+    margin: 1rem 0;
+}
+.work a {
+    text-decoration: none;
+}
+.work .link{
+    max-width: 10.7rem;
+    justify-content: space-between;
+    color: cyan;
+    display: flex;
+    border-bottom: 0.1rem var(--Cyan) solid;
+}
+
+.social{
+    display: flex;
+    height: 80vh;
+    align-content: flex-start;
+    justify-content: center;
+    padding: 5vw 0;
+    background: no-repeat url(images/bg-quotes.png) 2% 4%;
+    background-color: var(--DarkBlue2);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--DarkBlue4);
+    width: 27%;
+    height: 45%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    
+}
+.card > *{
+    margin: 1rem 0;
+}
+.card .text{
+    font-size: 0.9rem;
+}
+
+.profile{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    font-size: 0.8rem;
+}
+.avatar{
+    width: 80%;
+    grid-row: span 2;
+    border-radius: 100%;
+}
+.profile .name{
+    align-self: flex-end;
+    font-weight: 700;
+}
+.profile .job{
+    align-self: flex-start;
+}
+
+.footer{
+    height: 65vh;
+    background: var(--DarkBlue3);
+    display: grid;
+    grid-template: 20% 30% / 1fr 0.7fr auto auto 0.7fr;
+    padding: 0 2.5rem;
+    padding-top: 6rem;
+    align-content: center;
+    justify-content: center;
+}
+.footer .logo{
+    grid-column: 1 /-1;
+}
+.footer > *{
+    padding: 0 2rem;
+}
+.icon{
+    margin-right: 1rem;
+}
+.icons > img{
+    width: 25%;
+    margin:0 0.3rem;
+}
+.footer .text, .footer .icon, .icons{
+    margin-top: 1rem;
+}
+
+.access{
+    position: absolute;
+    background-color: var(--DarkBlue1);
+    padding: 0 2rem;
+    height: 35vh;
+    width: 60%;
+    margin-top: 50vh;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+.access input{
+    width: 60%;
+    margin: 0 0.5rem;
+    background-color: var(--White);
+    border: none;
+    outline: none;
+    padding: 0.6rem;
+    border-radius: 1rem;
+}
+.access > *{
+    margin: 0.5rem 0;
+}
+
+.alert{
+    color: var(--LightRed);
+    margin: 0 2rem;
+    text-align: left;
+    display: none;
+}
+.active{
+    display: block;
+}
+
+@media(max-width:800px){
+    html{
+        font-size: 11px;
+    }
+}
+
+@media(max-width:600px){
+    html{
+        font-size: 10px;
+    }
+    .functions .container {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .functions .container .box >*{
+        margin: 0.5rem 0 ;
+    }
+    .functions .container .box .heading{
+        font-size: 1.5rem;
+    }
+        
+    .work{
+        flex-direction: column;
+        text-align: center;
+    }
+    .work .hero{
+        width: 80%;
+    }
+    .work .content > *{
+        margin: 1rem 0;
+    }
+    .work .link{
+        max-width: 12rem;
+    }
+
+    .social{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .card{
+        flex-direction: column;
+        width: 80%;
+        height:20%;
+        margin: 2rem auto;
+        padding: 1rem 2rem;
+    }
+    .card > *{
+        margin: 1rem 0;
+    }
+
+    .access{
+        padding: 2rem 2rem;
+        height: 30vh;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 100vh;
+        align-self: center;
+        font-size: 0.8rem;
+    }
+    .access input{
+        width: 100%;
+        padding: 0.7rem;
+    }
+    .access button{
+        margin-top: 1rem;
+        width: 100%;
+        font-size: 0.5rem;
+    }
+    .access .heading{
+        font-size: 1.8rem;
+    }
+    
+    .footer{
+        height: 70vh;
+        background: var(--DarkBlue3);
+        display: grid;
+        grid-template: auto/  1fr ;
+        padding: 0 2.5rem;
+        padding-top: 15em;
+    }
+    .footer .logo{
+        width: 40%;
+    }
+    .footer > *{
+        padding: 0 2rem;
+        margin: 0.5rem 0;
+    }
+    .icon{
+        margin-right: 1rem;
+    }
+    .icons > img{
+        width: 10%;
+        margin:0 0.3rem;
+    }
+    .footer .text, .footer .icon, .icons{
+        margin-top: 1rem;
+    }
+}
