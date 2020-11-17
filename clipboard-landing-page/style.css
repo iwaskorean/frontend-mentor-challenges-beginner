@@ -1,0 +1,386 @@
+:root{
+--StrongCyan: hsl(171, 66%, 44%); /* ### button 1 */
+--LightBlue: hsl(233, 100%, 69%); /*  ### button 2 */
+--DarkGrayishBlue: hsl(210, 10%, 33%); /* ### heading*/
+--GrayishBlue: hsl(201, 11%, 66%); /* ### text */
+}
+
+*,*:beofore,*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 18px;
+}
+
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+    margin: 0;
+}
+
+.wrapper{
+    width: 100%;
+    height: auto;
+    background: no-repeat url(images/bg-header-desktop.png);
+    background-size: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+.heading{
+    font-weight: 600;
+    color: var(--DarkGrayishBlue);
+}
+.text{
+    color: var(--GrayishBlue);
+    line-height: 1.5rem;
+}
+.heading, .text{
+    margin: 1rem 0;
+}
+
+button{
+    width: 40%;
+    min-width: 11.83rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 1.5rem 0.2rem !important;
+    letter-spacing: 0.05rem;
+    font-size: 1.1rem;
+}
+
+.forIos{
+    background-color:var(--StrongCyan);
+    box-shadow: 1px 3px 2px hsl(171, 65%, 41%);
+    border: 1px solid var(--StrongCyan);
+    transition: all 0.5s;
+}
+.forWin{
+    background-color: var(--LightBlue);
+    box-shadow: 1px 3px 2px hsl(233, 60%, 57%);
+    border: 1px solid var(--LightBlue);
+    transition: all 0.5s;
+}
+.forIos:hover{
+    background-color: white;
+    color: var(--StrongCyan);
+    border: 1px solid var(--StrongCyan);
+    box-shadow: 1px 3px 2px hsl(0, 0%, 100%);
+    transition: all 0.5s;
+}
+.forWin:hover{
+    background-color: white;
+    color: var(--LightBlue);
+    border: 1px solid var(--LightBlue);
+    box-shadow: 1px 3px 2px hsl(0, 0%, 100%);
+    transition: all 0.5s;
+}
+.icon, .logo{
+    outline: none;
+    cursor: pointer;
+}
+
+.intro, .download{
+    width: 55%;
+    height: auto;
+    margin: 3rem 0;
+    text-align: center;
+}
+.intro .heading ,.download .heading{
+    font-size: 2.5rem;
+}
+.intro .text, .download .text {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+.intro .logo{
+    width:18%;
+    min-width:6rem;
+    margin: 2rem 0;
+}
+
+.section{
+    height: auto;
+    background-color: #fff;
+    margin: 3rem 0;
+}
+
+.computer .container{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template: auto auto / 1fr 1fr;
+    grid-gap: 2rem;
+    grid-column-gap: 3rem;
+    align-items: center;
+}
+
+.computer .container .textBox{
+    grid-column: 1 /-1;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.textBox .heading{
+    font-size: 2rem; 
+}
+.textBox .text{
+    font-size: 1.1rem;
+}
+
+.detail__textBox{
+    width: 70%;
+}
+.detail__textBox .text{
+    margin-bottom: 2.5rem;
+}
+.detail__textBox .heading{
+    font-size: 1.3rem;
+}
+
+.heroBox{
+    width: 100%;
+}
+.hero{
+    width: 100%;
+    transform: translateY(100px);
+    opacity: 0.05;
+    transition: all 0.5s; 
+}
+.heroActive{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.pad{
+    width: 60%;
+}
+.pad .container {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template: auto auto / 1fr;
+    grid-gap: 1rem;
+}
+.pad .container .textBox{
+    width: 100%; 
+    margin: 0 auto;
+    text-align: center;
+}
+
+.workflow{
+    width: 80%;
+}
+.workflow .container{
+    width: 100%;
+    display: grid;   
+    grid-template: auto auto/ 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-row-gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    
+}
+.workflow .textBox{
+    grid-column: 1 / -1;
+    text-align: center;
+}
+.workflow .workflowBox{
+    text-align: center;
+    align-self: flex-start;
+    padding: 0 1rem ;
+}
+.workflowBox img{
+    width: 2rem;
+    height: 32px;
+}
+
+.companies{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    margin: 6rem 0;
+}
+.companies img{
+    width: 80%;
+    cursor: pointer;
+}
+
+.footer{
+    width: 100%;
+    background-color: rgba(226, 226, 226, 0.61);
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+}
+.footer .container{
+    display: grid;
+    width: 60%;
+    grid-template: auto auto / repeat(4, 1fr);
+    margin: 2rem auto;
+    align-items: flex-start;
+}
+.footer .container img{
+    grid-row: 1 /-1;
+    width: 40%;
+    min-width: 4.2rem;
+    justify-self: center;
+}
+.footer .container .text{
+    margin: 0;
+    color: #000;
+}
+.footer .iconBox{
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+}
+.footer .container .text {
+    cursor: pointer;
+}
+
+.footer .iconBox{
+    margin: 2rem auto;
+}
+.footer .iconBox img{
+    width: 1.5rem;
+}
+
+@media(max-width:800px){
+    html{
+        font-size: 15px;
+    }
+    button{
+        margin: 1rem 0 !important;
+    }
+    .hero{
+        width: 100%;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media(max-width:500px){
+    html{
+        font-size: 13px;
+    }
+
+    button{
+        width: 100%;
+        margin: 0.5rem 0.2rem !important;
+        letter-spacing: 0.05rem;
+        font-size: 1.1rem;
+    }
+
+    .intro, .download{
+        width: 85%;
+        margin: 3rem 0;
+    }
+
+    .intro .logo{
+        width:30%;
+        margin: 2rem 0;
+    }
+
+    .section{
+        margin: 5rem 0;
+    }
+
+    .computer{
+        width: 85%;
+    }
+    .computer .container{
+        width: 100%;
+        grid-template: auto / 1fr;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .computer .container .textBox{
+        width: 100%;
+    }
+    
+    .detail__textBox{
+        width: 100%;
+    }
+    .detail__textBox .text{
+        margin-bottom: 3rem;
+    }
+    
+    .pad{
+        width: 85%;
+    }
+    .pad .container {
+        width: 100%;
+        grid-gap: 2rem;
+    }
+    
+    .workflow{
+        width: 85%;
+    }
+    .workflow .container{
+        width: 100%;
+        grid-template: auto / 1fr;
+        grid-row-gap: 2.5rem;
+    }
+
+    .workflow .textBox{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+    .workflow .workflowBox{
+        text-align: center;
+        align-self: center;
+        padding: 0;
+    }
+    .workflowBox img{
+        width: 2.5rem;
+        height: 2.2rem;
+    }
+    
+    .companies{
+        width: 50%;
+        grid-template-columns: 1fr;
+        grid-gap: 3.5rem;
+        margin: 4rem 0;
+    }
+
+    .footer{
+        width: 100%;
+        background-color: rgba(226, 226, 226, 0.61);
+        flex-direction: column;
+    }
+    .footer .container{
+        width: 60%;
+        grid-template: auto / 1fr;
+        margin: 2rem auto;
+        grid-gap: 1rem;
+        text-align: center;
+    }
+    .footer .container img{
+        width: 30%;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer .iconBox{
+        width: 30%;
+    }
+
+    .footer .iconBox{
+        margin: 0rem auto;
+        margin-bottom: 2rem;
+    }
+}

@@ -2,86 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Clipboard landing page</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Clipboard landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+    <div class="wrapper">
+      
+      <div class="intro">
+        <div class="container">
+          <img src="images/logo.svg" alt="" class="logo">
+          <div class="heading">A history of everything you copy</div>
+          <div class="text">Clipboard allows you to track and organize everything you 
+            copy. Instantly access your clipboard on all your devices.</div>
+          <button class="forIos">Download for iOS</button>
+          <button class="forWin">Download for Mac</button>
+        </div>
+      </div>
+      
+      <div class="section computer">
+        <div class="container">
+          <div class="textBox">
+            <div class="heading">Keep track of your snippets</div>
+            <div class="text">  Clipboard instantly stores any item you copy in the cloud, 
+              meaning you can access your snippets immediately on all your 
+              devices. Our Mac and iOS apps will help you organize everything.</div>
+          </div>
+          <div class="heroBox" ><img class="hero"src="images/image-computer.png" alt="" id="computer"></div>
+          <div class="detail__textBox">
+            <div class="heading"> Quick Search</div>
+            <div class="text">
+              Easily search your snippets by content, category, web address, application, and more.</div>
+            <div class="heading"> iCloud Sync</div>
+            <div class="text">Instantly saves and syncs snippets across all your devices.</div>
+            <div class="heading">Complete History</div>
+            <div class="text">Retrieve any snippets from the first moment you started using the app.</div>
+          </div>
+        </div>
+      </div>
 
-  A history of everything you copy
+      <div class="section pad">
+        <div class="container">
+          <div class="textBox">
+            <div class="heading">  Access Clipboard anywhere
+              </div>
+            <div class="text">Whether you’re on the go, or at your computer, you can access all your Clipboard 
+              snippets in a few simple clicks.</div>
+          </div>
+          <div class="heroBox" >
+            <img class="hero" src="images/image-devices.png" alt="" id="pad">
+          </div>
+        </div>
+      </div>
 
-  Clipboard allows you to track and organize everything you 
-  copy. Instantly access your clipboard on all your devices.
+      <div class="section workflow">
+        <div class="container">
+          <div class="textBox">
+            <div class="heading">Supercharge your workflow</div>
+            <div class="text">We’ve got the tools to boost your productivity.</div>
+          </div>
+          <div class="workflowBox">
+            <img src="images/icon-blacklist.svg" alt="">
+            <div class="heading">Create blacklists</div>
+            <div class="text">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</div>
+          </div>
+          <div class="workflowBox">
+            <img src="images/icon-text.svg" alt="">
+            <div class="heading">Plain text snippets</div>
+            <div class="text"> Remove unwanted formatting from copied text for a consistent look.</div>
+          </div>
+          <div class="workflowBox">
+            <img src="images/icon-preview.svg" alt="">
+            <div class="heading"> Sneak preview</div>
+            <div class="text">Quick preview of all snippets on your Clipboard for easy access.</div>
+          </div>
+        </div>
+      </div>
 
-  Download for iOS
-  Download for Mac
+      <div class="section companies">
+        <img src="images/logo-google.png" alt="" class="company">
+        <img src="images/logo-ibm.png" alt="" class="company">
+        <img src="images/logo-microsoft.png" alt="" class="company">
+        <img src="images/logo-hp.png" alt="" class="company">
+        <img src="images/logo-vector-graphics.png" alt="" class="company">
+      </div>
 
-  Keep track of your snippets
+      <div class="section download">
+        <div class="container">
+          <div class="heading">Clipboard for iOS and Mac OS</div>
+          <div class="text"> Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+            and you’re ready to start adding to your clipboard.</div>
+          <button class="forIos">Download for iOS</button>
+          <button class="forWin">Download for Mac</button>
+        </div>
+      </div>
 
-  Clipboard instantly stores any item you copy in the cloud, 
-  meaning you can access your snippets immediately on all your 
-  devices. Our Mac and iOS apps will help you organize everything.
-
-  Quick Search
-
-  Easily search your snippets by content, category, web address, application, and more.
-
-  iCloud Sync
-
-  Instantly saves and syncs snippets across all your devices.
-
-  Complete History
-
-  Retrieve any snippets from the first moment you started using the app.
-
-  Access Clipboard anywhere
-
-  Whether you’re on the go, or at your computer, you can access all your Clipboard 
-  snippets in a few simple clicks.
-
-  Supercharge your workflow
-
-  We’ve got the tools to boost your productivity.
-
-  Create blacklists
-
-  Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
-
-  Plain text snippets
-
-  Remove unwanted formatting from copied text for a consistent look.
-
-  Sneak preview
-
-  Quick preview of all snippets on your Clipboard for easy access.
-
-  Clipboard for iOS and Mac OS
-
-  Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
-  and you’re ready to start adding to your clipboard.
-
-  Download for iOS
-  Download for Mac
-
-  FAQs
-  Contact Us
-  Privacy Policy
-  Press Kit
-  Install Guide
-  
-  <footer>
+      <div class="footer">
+        <div class="container">
+          <img src="images/logo.svg" alt="" class="logo">
+          <div class="text">FAQs</div>
+          <div class="text">Contact Us</div>
+          <div class="text">Privacy Policy</div>
+          <div class="text">Press Kit</div>
+          <div class="text">Install Guide</div>
+        </div>
+        <div class="iconBox">
+          <img src="images/icon-facebook.svg" alt="" class="icon">
+          <img src="images/icon-twitter.svg" alt="" class="icon">
+          <img src="images/icon-instagram.svg" alt="" class="icon">
+        </div>
+      </div>
+    
+    </div>
+    
+   <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Sewook Han</a>.
     </p>
-  </footer>
+  </footer> -->
+
+  <script>
+    const computer = document.querySelector('#computer');
+    const pad = document.querySelector('#pad');
+    const introSecHeight = document.querySelector('.intro').clientHeight;
+    const computerSecHeight = document.querySelector('.computer').clientHeight;
+    const padSecHeight = document.querySelector('.pad').clientHeight;
+    const screenWidth = window.innerWidth;
+
+    function heroActive(){
+      let scrollValue = window.scrollY;
+      
+      if(scrollValue > introSecHeight && scrollValue <= introSecHeight+(computerSecHeight*0.9))
+        computer.classList.add('heroActive');
+      else
+        computer.classList.remove('heroActive');
+
+      if(scrollValue >= introSecHeight+(computerSecHeight*0.9) && scrollValue < introSecHeight+computerSecHeight+padSecHeight*0.8)
+        pad.classList.add('heroActive');
+      else 
+        pad.classList.remove('heroActive');
+    }
+
+    // for desktop
+    if(screenWidth > 800)
+      document.addEventListener('scroll', heroActive);
+    
+  </script>
 </body>
 </html>
