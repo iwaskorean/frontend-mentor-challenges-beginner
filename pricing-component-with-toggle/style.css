@@ -90,9 +90,9 @@ header .buttonBox{
     justify-items: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 4vh ; 
     margin: 0 auto;
-     /* margin: 4vh ; */
+    margin-bottom: 4vh ; 
+
 }
 
 .box{
