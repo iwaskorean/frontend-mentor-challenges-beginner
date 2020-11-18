@@ -2,51 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <title>Pricing component with toggle</title>
+
 </head>
 <body>
+  <div class="wrapper">
+    <header>
+      <div class="title">
+        Our Pricing
+      </div>
+      <div class="buttonBox">
+        <p>Annually</p>
+        <button class="toggleBtn" data-num = "1">
+          <div class="circleBtn"></div>
+        </button>
+        <p>Monthly</p>
+      </div>
+    </header>
 
-  Our Pricing
-  Annually
-  Monthly
+    <div class="container">
+      <div class="box basic">
+        <div class="heading">Basic</div>
+        <div class="price dollar">&dollar;&nbsp;
+          <span class="price ann">19.99</span>
+          <span class="price mon activePrice">199.99</span>
+        </div>
+        <hr>
+        <div class="text">500 GB Storage</div>
+        <hr>
+        <div class="text">2 Users Allowed</div>
+        <hr>
+        <div class="text">Send up to 3 GB</div>
+        <hr>
+        <button class="moreBtn">Learn More</button>
+      </div>
+      <div class="box pro">
+        <div class="heading">Professional</div>
+        <div class="price dollar">&dollar;&nbsp;
+          <span class="price ann">24.99</span>
+          <span class="price mon activePrice">249.99</span>
+        </div>
+        <hr>
+        <div class="text">1 TB Storage</div>
+        <hr>
+        <div class="text">5 Users Allowed</div>
+        <hr>
+        <div class="text">Send up to 10 GB</div>
+        <hr>
+        <button class="moreBtn">Learn More</button>
+      </div>
+      <div class="box master">
+        <div class="heading">Master</div>
+        <div class="price dollar">&dollar;&nbsp;
+          <span class="price ann">39.99</span>
+          <span class="price mon activePrice">399.99</span>
+        </div>
+        <hr>
+        <div class="text">2 TB Storage</div>
+        <hr>
+        <div class="text">10 Users Allowed</div>
+        <hr>
+        <div class="text">Send up to 20 GB</div>
+        <hr>
+        <button class="moreBtn">Learn More</button>
+      </div>
+    </div>
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sewook Han</a>.
+  </div> -->
+
+  <script>
+    const toggleBtn = document.querySelector('.toggleBtn');
+    const circleBtn = document.querySelector('.circleBtn');
+    
+    function active(){
+      circleBtn.classList.toggle('activeCircleBtn');
+      const monPrices = document.querySelectorAll('.price.mon');
+
+      const set = setInterval(() => {
+        const annPrices = document.querySelectorAll('.price.ann');
+        
+        const ann1= Number(annPrices[0].textContent);
+        const ann2= Number(annPrices[1].textContent);
+        const ann3= Number(annPrices[2].textContent);
+        
+        if(toggleBtn.dataset.num == 1){
+          if(annPrices[0].textContent < monPrices[0].textContent-1+1)
+            annPrices[0].textContent = (Math.round((ann1 +1)*100)) /100;
+          if(annPrices[1].textContent < monPrices[1].textContent-1+1)
+            annPrices[1].textContent = (Math.round((ann2 +1)*100)) /100;
+          if(annPrices[2].textContent < monPrices[2].textContent-1+1)
+            annPrices[2].textContent = (Math.round((ann3 +1)*100)) /100;
+          else{
+            toggleBtn.dataset.num=2;
+            clearInterval(set);
+            }
+        }
+        else{
+            if(annPrices[0].textContent > 19.99)
+              annPrices[0].textContent = (Math.round((ann1 -1)*100)) /100;
+            if(annPrices[1].textContent > 24.99)
+              annPrices[1].textContent = (Math.round((ann2 -1)*100)) /100;
+            if(annPrices[2].textContent > 39.99)
+              annPrices[2].textContent = (Math.round((ann3 -1)*100)) /100;
+            else{
+              toggleBtn.dataset.num=1;
+              clearInterval(set);
+            }
+        }
+      }, 5);
+
+    }
+
+    toggleBtn.addEventListener('click', active);
+  </script>
 </body>
 </html>
