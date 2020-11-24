@@ -1,0 +1,231 @@
+:root{
+    /* Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%) */
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+
+*,*:before,*:after{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+html{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    color: var(--PaleBlue);
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background: no-repeat url(images/bg-desktop.png) 0 100%;
+    background-size: 100%;
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 70%;
+    min-width: 640px;
+    display: grid;
+    grid-template-columns: 3.5fr 6fr;
+    grid-gap: 2rem;
+    align-self: center;
+}
+
+.logoBox, .storageBox{
+    height: auto;
+    background-color: var(--DarkBlue);
+    border-radius: 1.5rem;
+}
+
+.logoBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-right-radius: 8rem;
+    padding: 2.5rem 2rem;
+}
+.logoBox > *{
+    margin: 1rem 0;
+}
+.logo{
+    width: 43%;
+    min-width: 120px;
+}
+
+.icons{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.icons > div{
+    background-color: var(--VeryDarkBlue);
+    height: 2rem;
+    padding: 1rem;
+    border-radius: 0.9rem;    
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.icon{
+    width: 2rem;
+}
+#document{
+    width: 1.8rem;
+}
+#folder{
+    margin: 0rem 1.2rem;
+}
+
+
+.storageBox{
+    position: relative;
+    padding: 2em 2.5rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.text{
+    letter-spacing: 0.1rem;
+    margin: 1rem 0;
+}
+.highlight{
+    font-weight: 700;
+}
+
+.progressBar{
+    width: 100%;
+    height: 1.5rem;
+    padding: 0.3rem;
+    background-color: hsl(229, 54%, 18%);
+    border-radius: 5rem;
+}
+.progress{
+    width: 7%;
+    height: 100%;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: inherit;
+    transition: all 2s;
+}
+
+.active{
+    width: 81.5%;
+    transition: all 2s;
+}
+.ball{
+    width: 1.1rem;
+    height: 1.1rem;
+    margin: 0.2rem 0.3rem;
+    background: #fff;
+    border-radius: 100%;
+    float: right;
+}
+.volume{
+    display: flex;
+    margin: 1rem 0;
+    justify-content: space-between;
+}
+
+.alert {
+    position: absolute;
+    top: -30%;
+    left: 60%;
+    width: 234px;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alert::after{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 25px 18px 00px 18px;
+	border-color: #FFFFFF transparent;
+	z-index: 1;
+    top: 95%; 
+    left: 45%;
+}
+
+.alert .highlight{
+    color: black;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+.alert .text{
+    margin: 0;
+    font-weight: 700;
+    color: var(--GrayishBlue);
+    margin: 0.3rem;
+}
+
+
+@media(max-width:850px){
+    html{
+        font-size:11px;
+    }
+    body{
+        height: 100vh;
+    }
+    
+    .wrapper{
+        width: 100%;
+        width: auto;
+        height: 100%;
+        background: no-repeat url(images/bg-mobile.png) 0 0;
+        background-size: cover;
+
+    }
+    .container{
+        width: 80%;
+        min-width: 0px;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+    }
+    
+    .logoBox{
+        padding: 2rem;
+    }
+    .logoBox > *{
+        margin: 1.5rem 0;
+    }
+    .logo{
+        width: 43%;
+    }
+    #folder{
+        margin: 0rem 2rem;
+    }
+
+    .storageBox{
+        margin-top: 0rem;
+    }
+    .text{
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .alert {
+        position: absolute;
+        top: 80%;
+        left: 26%;
+        width: 150px;
+    }
+    .alert::after{
+        display: none;
+    }
+    
+}

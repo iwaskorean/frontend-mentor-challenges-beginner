@@ -2,30 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Fylo data storage component</title>
 </head>
 <body>
 
-  You’ve used 815 GB of your storage
+<div class="wrapper">
+  
+  <div class="container">
+    <div class="logoBox">
+      <img src="images/logo.svg" alt="" class="logo">
+      <div class="icons">
+        <div><img src="images/icon-document.svg" alt="" class="icon" id="document"></div>
+        <div id="folder"><img src="images/icon-folder.svg" alt=""class="icon"></div>
+        <div><img src="images/icon-upload.svg" alt=""class="icon"></div>
+      </div>
+    </div>
 
-  185 GB Left
+    <div class="storageBox">
+      <div class="alert">
+        <div class="highlight"> 185</div> <div class="text">GB LEFT</div>
+      </div>
+      <p class="text"> You’ve used <span class="highlight">815 GB</span> of your storage</p>
+      <div class="progressBar">
+        <div class="progress">
+          <div class="ball"></div>
+        </div>
+      </div>
+      <div class="volume">
+        <div class="highlight">0 GB</div>
+        <div class="highlight">1000 GB</div>
+      </div>
+    </div>
   
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
+</div>
+
+<script>
+  const progressBar = document.querySelector('.progress');
+  setTimeout(() => {
+    progressBar.classList.add('active');
+  }, 300);
+</script>
 </body>
 </html>
