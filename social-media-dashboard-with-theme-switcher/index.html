@@ -2,86 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Social Medial Dashboard</title>
 </head>
+
 <body>
-
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
   
+  <div class="wrapper">
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+    <div class="dashboard">
+      <div class="textBox">
+        <div class="title">
+          Social Media Dashboard
+        </div>
+        <div class="subTitle">
+          Total Followers: 23,004
+        </div>
+      </div>
+      <div class="btnBox">
+        <p>Dark Mode</p> 
+        <button class="toggleBtn">
+          <div class="ball" data-num=0></div>
+        </button>
+      </div>
+      <div class="card facebook">
+        <div class="profile">
+          <img src="images/icon-facebook.svg" alt="" class="icon">
+          <p>@nathanf</p>
+        </div>
+        <div class="followers">1987</div>
+        <div class="followersText">Followers</div>
+        <div class="today">&uarr; 12 Today</div>
+      </div>
+      <div class="card twitter">
+        <div class="profile">
+          <img src="images/icon-twitter.svg" alt="" class="icon">
+          <p>@nathanf</p> 
+        </div>
+        <div class="followers">1044</div>
+        <div class="followersText">Followers</div>
+        <div class="today">&uarr; 99 Today</div>
+      </div>
+      <div class="card instagram">
+        <div class="profile">
+          <img src="images/icon-instagram.svg" alt="" class="icon"> 
+          <p>  @realnathanf</p>
+        </div>
+        <div class="followers">1111</div>
+        <div class="followersText">Followers</div>
+        <div class="today">&uarr; 1099 Today</div>
+      </div>
+      <div class="card youtube">
+        <div class="profile">
+          <img src="images/icon-youtube.svg" alt="" class="icon">
+          <p>Nathan F.</p>
+        </div>
+        <div class="followers">8239</div>
+        <div class="followersText">Subscribers</div>
+        <div class="today red">&darr; 144 Today</div>
+      </div>
+    </div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+      <div class="overview">
+        <div class="title">  Overview - Today</div>
+        <div class="card">
+          <div class="name">  Page Views</div>
+          <img src="images/icon-facebook.svg" alt="" class="icon">
+          <div class="followers">87</div>
+          <div class="today">&uarr; 3%</div>
+        </div>
+        <div class="card">
+          <div class="name">Likes</div>
+          <img src="images/icon-facebook.svg" alt="" class="icon">
+          <div class="followers">52</div>
+          <div class="today red"> &darr; 2%</div>
+        </div>
+        <div class="card">
+          <div class="name">  Likes</div>
+          <img src="images/icon-instagram.svg" alt="" class="icon">
+          <div class="followers">  5462</div>
+          <div class="today">&uarr; 2257%</div>
+        </div>
+        <div class="card">
+          <div class="name">Profile Views</div>
+          <img src="images/icon-instagram.svg" alt="" class="icon">
+          <div class="followers">52k</div>
+          <div class="today">&uarr; 1375%</div>
+        </div>
+        <div class="card">
+          <div class="name">  Retweets</div>
+          <img src="images/icon-twitter.svg" alt="" class="icon">
+          <div class="followers">  117</div>
+          <div class="today">&uarr; 303%</div>
+        </div>
+        <div class="card">
+          <div class="name">Likes</div>
+          <img src="images/icon-twitter.svg" alt="" class="icon">
+          <div class="followers">507</div>
+          <div class="today">&uarr; 553%</div>
+        </div>
+        <div class="card">
+          <div class="name">Likes</div>
+          <img src="images/icon-youtube.svg" alt="" class="icon">
+          <div class="followers">107</div>
+          <div class="today red">&darr; 19%</div>
+        </div>
+        <div class="card">
+          <div class="name">Total Views</div>
+          <img src="images/icon-youtube.svg" alt="" class="icon">
+          <div class="followers">1407</div>
+          <div class="today red">&darr; 12%</div>
+        </div>
+      </div>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+  </div>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
+  <!-- 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Sewook Han</a>.
+  </div> -->
+
+<script>
+  const toggleBtn = document.querySelector('.toggleBtn')
+  const ballBtn = document.querySelector('.ball');
+  const wrapper = document.querySelector('.wrapper');
+  const cards = document.querySelectorAll('.card');
+  const titles = document.querySelectorAll('.title');
+  const subTitle = document.querySelectorAll('.subTitle');
+  const btnText = document.querySelector('.btnBox p');
+  const followers = document.querySelectorAll('.followers');
+  const followersText = document.querySelectorAll('.followersText');
+  const ids = document.querySelectorAll('.profile p');
+  const names = document.querySelectorAll('.card .name');
+
+  
+  function darkThemeActive(){
+    // ## BG
+    wrapper.classList.toggle('darkTheme__bg');
+    cards.forEach(card => card.classList.toggle('darkTheme__cardBg'));
+    // ## BTN
+    ballBtn.classList.toggle('darkTheme__ball');
+    toggleBtn.classList.toggle('darkTheme__toggleBtn');
+    // ## WHITE TEXT
+    btnText.classList.toggle('darkTheme__whiteText');
+    titles.forEach(title=>title.classList.toggle('darkTheme__whiteText'));
+    followers.forEach(follower => follower.classList.toggle('darkTheme__whiteText'));
+    // ## BLUE TEXT
+    ids.forEach(id => id.classList.toggle('darkTheme__blueText'));
+    followersText.forEach(text => text.classList.toggle('darkTheme__blueText'));
+    subTitle.forEach(text => text.classList.toggle('darkTheme__blueText'));
+    names.forEach(text => text.classList.toggle('darkTheme__blueText'));   
+  }
+  toggleBtn.addEventListener('click', darkThemeActive);
+</script>
 </body>
 </html>

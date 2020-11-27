@@ -1,0 +1,298 @@
+:root{
+    /* ## PRAIMARY */
+    --LimeGreen: hsl(163, 72%, 41%);
+    --BrightRed: hsl(356, 69%, 56%);
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --YouTube: hsl(348, 97%, 39%);
+    /* --Instagram: linear gradient ;hsl(37, 97%, 70%) to hsl(329, 70%, 58%); */
+
+    /* ## Light Theme */
+    --WhiteBG: hsl(0, 0%, 100%);
+    --VeryPaleBlueTopBGPattern: hsl(225, 100%, 98%);
+    --LightGrayishBlueCardBG: hsl(227, 47%, 96%);
+    --DarkGrayishBlueText: hsl(228, 12%, 44%);
+    --VeryDarkBlueText: hsl(230, 17%, 14%);
+    /* ## Dark Theme */
+    --VeryDarkBlueBG: hsl(230, 17%, 14%);
+    --VeryDarkBlueTopBGPattern: hsl(232, 19%, 15%);
+    --DarkDesaturatedBlueCardBG: hsl(228, 28%, 20%);
+    --DesaturatedBlueText: hsl(228, 34%, 66%);
+    --WhiteText: hsl(0, 0%, 100%);
+}
+
+*,*:before,*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--VeryPaleBlueTopBGPattern) 30%, white 30%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard, .overview{
+    margin: 2rem 0;
+}
+
+.dashboard{
+    width: 80%;
+    height: 40%;
+    display: grid;
+    grid-template: 80px auto / repeat(4,1fr);
+    grid-gap: 1.5rem;
+    grid-row-gap: 1rem;
+    align-items: center;
+    color: var(--DarkGrayishBlueText);
+}
+
+.dashboard .textBox{
+    grid-column: span 3;
+}
+.dashboard .textBox > *{
+    margin: 0.5rem 0 ;
+}
+.dashboard .textBox .title{
+    font-size: 2.3rem;
+    color: var(--VeryDarkBlueText);
+    transition: all 1.5s;
+}
+
+.btnBox{
+    justify-self: end;
+    display: flex;
+    align-items: center;
+}  
+.btnBox p{
+    margin: 0 1.5rem;
+    transition: all 1s;
+}
+
+.dashboard .card{
+    width: 100%;
+    height: 100%;
+    background-color: var(--LightGrayishBlueCardBG);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard .card > *{
+    margin: 0.5rem 0;
+}
+.dashboard .card .profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card .profile > *{
+    margin: 0 0.25rem;
+}
+.icon{
+    width: 1.3rem;
+}
+.dashboard .card .followers{
+    font-size: 3.5rem;
+    color: var(--VeryDarkBlueText);
+    margin-bottom: 0rem;
+}
+.card .followersText{
+    font-weight: 400;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    margin-top: -0.4rem;
+}
+.card .today{
+    color: var(--LimeGreen);
+    margin-top: 1rem;
+}
+.card .today.red{
+    color: var(--BrightRed);
+}
+.card.facebook{
+    border-top:5px solid var(--Facebook); ;
+}
+.card.twitter{
+    border-top: 5px solid var(--Twitter);
+}
+.card.instagram{
+    border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    border-style: solid;
+    border-image-slice: 1;
+    border-image-width: 5px 0 0 0;
+}
+.card.youtube{
+    border-top: 5px solid var(--YouTube);
+}
+
+
+.overview{
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+    grid-gap: 1.5rem;
+}
+
+.overview .title{
+    color: var(--DarkGrayishBlueText);
+    font-size: 1.8rem;
+    grid-column: 1 / -1;
+    transition: all 1.5s;
+}
+
+.overview .card{
+    background-color: var(--LightGrayishBlueCardBG);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
+    align-items: center;
+    padding: 1.5rem 1rem;
+
+}
+
+.overview .card .icon{
+    justify-self: end;
+}
+
+.name   {
+    color: var(--DarkGrayishBlueText);
+}
+.overview .card .followers{
+    font-size: 2.5rem;
+    color: var(--VeryDarkBlueText);
+}
+.overview .card .today{
+    margin: 0;
+}
+
+.toggleBtn{
+    width: 4.5rem;
+    height: 2rem;
+    padding: 0.2rem 0.3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2.5rem;
+    background: hsl(0, 0%, 59%);
+    opacity: 0.6;
+    transition: all 1s;
+}
+.toggleBtn:hover{
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    opacity: 1;
+}
+.toggleBtn .ball{
+    width: 1.6rem;
+    height: 1.6rem;
+    background: var(--WhiteBG);
+    border-radius: 100%;
+    z-index: 2;    
+    float: right;
+    transition: all 1s;
+}
+
+/* ### dark theme */
+.toggleBtn .ball.darkTheme__ball{
+    background: var(--VeryDarkBlueBG);
+    transform: translateX(-2.35rem);
+}
+.toggleBtn.darkTheme__toggleBtn{
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.darkTheme__bg{
+    background: linear-gradient(180deg, var(--VeryDarkBlueTopBGPattern) 30%, var(--VeryDarkBlueBG) 30%);
+}
+.dashboard .textBox .title.darkTheme__whiteText,
+.overview .title.title.darkTheme__whiteText,
+.btnBox p.darkTheme__whiteText,
+.overview .card .followers.darkTheme__whiteText,
+.dashboard .card .followers.darkTheme__whiteText{
+    color: var(--WhiteText);
+}
+.dashboard .card.darkTheme__cardBg,
+.overview .card.darkTheme__cardBg{
+    background-color: var(--DarkDesaturatedBlueCardBG);
+}
+.darkTheme__blueText{
+    color: var(--DesaturatedBlueText);
+}
+
+@media(max-height:600px){
+    .wrapper{
+        height: auto;
+    }
+}
+@media(max-width:1000px){
+    html{
+        font-size: 12px;
+    }
+}
+
+@media(max-width:800px){
+    html{
+        font-size: 10.5px;
+    }
+}
+@media(max-width:700px){
+    .wrapper{
+        height: auto;
+        background: var(--WhiteBG);
+    }
+    .wrapper.darkTheme__bg{
+        background:var(--VeryDarkBlueBG);
+    }
+    .dashboard{
+        width: 80%;
+        height: auto;
+        display: grid;
+        grid-template: auto / 1fr;
+        grid-gap: 1rem;
+        color: var(--DarkGrayishBlueText);
+    }
+
+    .dashboard .textBox{
+        grid-column: span 1;
+    }
+    .dashboard .textBox > *{
+        margin: 0.5rem 0 ;
+    }
+
+    .btnBox{
+        justify-self: none;
+        width: 100%;
+        justify-content: space-between;
+    }  
+    .btnBox p{
+        margin: 0;
+    }
+    .dashboard, .overview{
+        margin: 1rem 0;
+    }
+    .overview{
+        grid-template: auto / 1fr;
+        grid-gap: 1.5rem;
+    }
+    .overview .card{
+        padding: 2rem 2.5rem;
+    }
+}
