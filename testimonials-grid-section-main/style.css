@@ -57,6 +57,7 @@ body{
 
 .item1{
     grid-column: span 2;
+    background: no-repeat url(images/bg-pattern-quotation.svg) 80% 5%;
     background-color: var(--Moderateviolet);
 }
 .item2{
