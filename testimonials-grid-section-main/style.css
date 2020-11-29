@@ -103,6 +103,7 @@ body{
 .title{
     color: var(--White);
     font-size: 1.5rem;
+    margin: 1rem 0;
 }
 .text{
     color: var(--Lightgrayishblue);
