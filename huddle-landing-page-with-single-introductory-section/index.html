@@ -2,113 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Huddle landing page with single introductory section</title>
 
-  <style>
-    * {
-      font-family: 'Open Sans', sans-serif;
-      color: white;
-      margin: 0;
-    }
-    
-    body{
-      background: no-repeat url("images/bg-desktop.svg") hsl(257, 40%, 49%);
-      background-size: cover;
-      font-weight: 400;
-      font-size: 1em;
-    }
-    
-    .logo img{
-      width: 230px;
-      margin: 30px;
-    }
-
-    .container{
-      position: relative;
-      margin: 0 50px; padding: 40px;
-      display: grid;
-      grid-gap: 20px;
-      grid-template: repeat(3, auto) / repeat(2, minmax(auto, 1fr));
-    }
-    
-    .mockups{
-      grid-row: span 3;
-    }
-
-    .mockups img{
-      width: 500px;
-    }
-
-    .title{      
-      font-weight: 700;
-      font-size: 43px;
-      line-height: 60px;
-      align-self: flex-end;
-    }
-
-    .subTitle{
-      align-self: center;
-      font-size: 15px;
-    }
-  
-    .button{
-      width: 180px;
-      height: 60px;
-      border-radius: 40px;
-      color: hsl(257, 40%, 49%);
-      font-size: 15px;
-      font-weight: 700;
-      border: 1px solid rgba(0,0,0,0.5);
-      box-shadow: 2px 2px rgba(0,0,0,0.2);
-      margin-top: 30px;
-    }
-
-    .attribution {
-      font-size: 10px;
-      text-align: right;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-top: 5%;
-    }
-  </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="images/logo.svg"> 
-  </div>
-  
-   
-  <div class="container">
-    <div class='mockups'>
-      <img src="images/illustration-mockups.svg" alt="">
+  <div class="wrapper">
+    <div class="logo">
+      <img src="images/logo.svg"> 
+    </div>
+    
+    <div class="container">
+      <div class='mockups'>
+        <img src="images/illustration-mockups.svg" alt="">
+      </div>
+    
+      <div class="title">
+        Build The Community Your Fans Will Love
+      </div>
+    
+      <div class="subTitle">
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+        Create connections with your users as you engage in genuine discussion. <br>
+        
+        <button class="button">
+          Register
+        </button>
+      </div>
+
+     </div>
     </div>
 
-  
-    <div class="title">
-      Build The Community Your Fans Will Love
-    </div>
-  
-    <div class="subTitle">
-      Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-      Create connections with your users as you engage in genuine discussion. <br>
-      
-      <button class="button">
-        Register
-      </button>
-    </div>
-
-  </div>
-
-  <footer>
+  <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Sewook Han</a>.
     </p>
-  </footer>
+  </footer> -->
 
 </body>
 </html>
