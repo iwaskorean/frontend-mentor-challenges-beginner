@@ -31,10 +31,10 @@ body{
 
 .wrapper{
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2rem;
 }
 button{
     font-family: 'Montserrat', 'sans-serif';

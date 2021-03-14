@@ -1,20 +1,5 @@
-# Frontend Mentor
-	
-	
-	Solve real-world HTML, CSS and JavaScript challenges whilst working to professional designs. 
-	Join over 12,000 developers building projects, reviewing code, and helping each other get better.
-	challenges allow you to improve your skills in a real-life workflow.
-	You can grap this course at [Frontend Mentor](https://www.frontendmentor.io) 
-	
-	
+# Frontend Mentor Challenges
 
-# How To Study
-	
-	
-	1. preview-file과 index.html 파악 후 디자인
-	2. 코드 작성 및 수정(with design guide)
-	3. 완성 후 다른 솔루션들과 비교 / 분석 / 수정
-	4. 문서화(→ Onenote)
-	5. Github push
-	
-	
+ **A Repository for my solutions of the FEM Challenges (Newbie and Junior level)**
+
+- You can check my solutions *[here](https://projects-page.vercel.app/)*.
